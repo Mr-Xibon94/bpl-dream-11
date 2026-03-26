@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <p className='text-5xl font-bold text-center text-blue-500 mb-10'>BPL DREAM 11 Project</p>
+      <p className='text-5xl font-bold text-center text-blue-500 mb-10'>BPL DREAM 11</p>
     
       <Suspense fallback={<div className='flex min-h-screen items-center justify-center'>
           <span className=" loading loading-spinner loading-lg"></span>
