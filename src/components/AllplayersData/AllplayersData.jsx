@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import PlayersData from '../PlayersData/PlayersData';
+import NavBar from '../NavBar/NavBar';
 
 const AllplayersData = ({ playerDataPromise }) => {
 
@@ -9,6 +10,9 @@ const AllplayersData = ({ playerDataPromise }) => {
         <>
 
             <div className=' bg-white w-11/12 m-auto  '>
+            <NavBar>
+                
+            </NavBar>
             <div className='mx-5 flex justify-between items-center mt-4'>
                 <h1 className='text-3xl font-bold '>Available Players</h1>
                 <div className='flex'>
