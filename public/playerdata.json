@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "category": "All-Rounder",
+    "playingType": {
+      "batting": "Left-hand bat",
+      "bowling": "Left-arm orthodox"
+    },
+    "rating": 9.5,
+    "price": 950000,
+    "img": "https://i.ibb.co.com/bMyGjTZP/sakib.webp"
+  },
+  {
+    "id": 2,
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "category": "Bowler",
+    "playingType": {
+      "bowling": "Left-arm fast"
+    },
+    "rating": 8.9,
+    "price": 850000,
+    "img": "https://i.ibb.co.com/qSwGGRC/mustafizur.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Virat Kohli",
+    "country": "India",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.8,
+    "price": 1200000,
+    "img": "https://i.ibb.co.com/5gkJFXq2/virat.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "category": "Bowler",
+    "playingType": {
+      "bowling": "Right-arm fast"
+    },
+    "rating": 9.3,
+    "price": 1000000,
+    "img": "https://i.ibb.co.com/HT6Lh5w5/bumrah.webp"
+  },
+  {
+    "id": 5,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.6,
+    "price": 1100000,
+    "img": "https://i.ibb.co.com/qLrmjHcF/babar.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "category": "Bowler",
+    "playingType": {
+      "bowling": "Left-arm fast"
+    },
+    "rating": 9.2,
+    "price": 980000,
+    "img": "https://i.ibb.co.com/wFs6SRrx/shaheen.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Joe Root",
+    "country": "England",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.1,
+    "price": 1050000,
+    "img": "https://i.ibb.co.com/60yGRq0L/root.webp"
+  },
+  {
+    "id": 8,
+    "name": "Ben Stokes",
+    "country": "England",
+    "category": "All-Rounder",
+    "playingType": {
+      "batting": "Left-hand bat",
+      "bowling": "Right-arm medium fast"
+    },
+    "rating": 9.4,
+    "price": 1150000,
+    "img": "https://i.ibb.co.com/Q7YPzcWh/ben-stokes.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Steve Smith",
+    "country": "Australia",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.5,
+    "price": 1080000,
+    "img": "https://i.ibb.co.com/gZy8nHQz/smith.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "category": "Bowler",
+    "playingType": {
+      "bowling": "Right-arm fast"
+    },
+    "rating": 9.3,
+    "price": 1020000,
+    "img": "https://i.ibb.co.com/ztxMCyv/cummins.jpg"
+  },
+  {
+    "id": 11,
+    "name": "AB de Villiers",
+    "country": "South Africa",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.9,
+    "price": 1250000,
+    "img": "https://i.ibb.co.com/1tbPc7Sb/abd.webp"
+  },
+  {
+    "id": 12,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "category": "Batsman",
+    "playingType": {
+      "batting": "Right-hand bat"
+    },
+    "rating": 9.4,
+    "price": 1070000,
+    "img": "https://i.ibb.co.com/HfWDDmBz/wiliamson.jpg"
+  }
+]
