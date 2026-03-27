@@ -2,7 +2,8 @@ import React from 'react';
 import Logo from '../../assets/logo.png'
 import Dollar from '../../assets/dollar_1.png'
 
-const NavBar = () => {
+const NavBar = ({coins}) => {
+    // console.log(coins); 
     return (
         <>
             <nav className='flex justify-between mx-5 py-6'>
@@ -21,7 +22,7 @@ const NavBar = () => {
 
                 <div className='p-5 '>
                     <div className='flex gap-2 items-center font-bold px-3 py-2 rounded-2xl border border-gray-200 '>
-                        <p>0 coin</p>
+                        <p>{coins} coin</p>
                     <div>
                         <img className='object-contain w-5 h-5 ' src={Dollar} alt="" />
                     </div>

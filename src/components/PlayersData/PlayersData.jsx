@@ -1,8 +1,24 @@
 import { Flag, User } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 
-const PlayersData = ({ players }) => {
-    console.log(players);
+const PlayersData = ({ players, coins, setcoins  }) => {
+    // console.log(players); 
+    const [isSuccess, setisSuccess] = useState(false)
+
+    const handlecoins = () => {
+        
+        const currentCoins = coins - players.price;
+        
+        if(currentCoins>=0){
+            setisSuccess(true)
+            setcoins(currentCoins);
+            alert(`Congrats! You selecet ${players.name}`)
+            return
+        }else{
+            alert('Limit Exceed');
+            return
+        }
+    }
     return (
         <div className='border border-gray-200 rounded-2xl m-5'>
             
@@ -25,7 +41,7 @@ const PlayersData = ({ players }) => {
 
                 <hr className='my-4 text-gray-300' />
 
-                <h2 className='text-black font-medium'>Rating</h2>
+                <h2 className='text-black font-medium'>Rating {players.rating}</h2>
 
                 <div className='text-black font-medium flex justify-between my-4'>
                     <h2>{players.playingType.batting}</h2>
@@ -36,7 +52,7 @@ const PlayersData = ({ players }) => {
                 <div className='flex justify-between'>
                     <h2 className='text-black font-medium'>Price:${players.price}</h2>
 
-                    <button className='text-gray-800 shadow-gray-200 bg-gray-100 p-1.5 rounded-[7px] text-[14px] '>Choose Player</button>
+                    <button  onClick={handlecoins} className={`${isSuccess? 'text-gray-400':'text-black'} font-medium cursor-pointer  shadow-gray-200 bg-gray-100 p-1.5 rounded-[7px] text-[14px]`} disabled={isSuccess}>{isSuccess? "Selected": "Choose Player"}</button>
 
                 </div>
 
