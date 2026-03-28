@@ -1,20 +1,22 @@
 import { Flag, User } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
-const PlayersData = ({ players, coins, setcoins, setselectedPlayers, selectedPlayers  }) => {
+const PlayersData = ({ players, coins, setcoins, setselectedPlayers, selectedPlayers }) => {
     // console.log(players); 
     const [isSuccess, setisSuccess] = useState(false)
 
-   useEffect(()=> {
-     const isActive = selectedPlayers.filter(player => player.id === players.id)
-    console.log(isActive); 
-   }, [selectedPlayers]);
+    useEffect(() => {
+        const isActive = selectedPlayers.find(player => player.id === players.id)
+        if (isActive) {
+            setisSuccess(true)
+        }
+    }, [selectedPlayers]);
 
     const handlecoins = () => {
         // setisSuccess(true)
         const currentCoins = coins - players.price;
-        
-        if(currentCoins>=0){
+
+        if (currentCoins >= 0) {
             setisSuccess(true)
             setcoins(currentCoins);
             alert(`Congrats! You selecet ${players.name}`)
@@ -22,16 +24,16 @@ const PlayersData = ({ players, coins, setcoins, setselectedPlayers, selectedPla
 
             // console.log(selectedPlayers);
             return
-        }else{
+        } else {
             alert('Limit Exceed');
             return
         }
 
-        
+
     }
     return (
         <div className='border border-gray-200 rounded-2xl m-5'>
-            
+
             <div className='  m-5 '>
                 <div>
                     <img className='h-[340px] w-[500px] rounded-2xl mx-auto mb-6' src={players.img} alt="" />
@@ -62,7 +64,7 @@ const PlayersData = ({ players, coins, setcoins, setselectedPlayers, selectedPla
                 <div className='flex justify-between'>
                     <h2 className='text-black font-medium'>Price:${players.price}</h2>
 
-                    <button  onClick={handlecoins} className={`${isSuccess? 'text-gray-400':'text-black'} font-medium cursor-pointer  shadow-gray-200 bg-gray-100 p-1.5 rounded-[7px] text-[14px]`} disabled={isSuccess}>{isSuccess? "Selected": "Choose Player"}</button>
+                    <button onClick={handlecoins} className={`${isSuccess ? 'text-gray-400' : 'text-black'} font-medium cursor-pointer  shadow-gray-200 bg-gray-100 p-1.5 rounded-[7px] text-[14px]`} disabled={isSuccess}>{isSuccess ? "Selected" : "Choose Player"}</button>
 
                 </div>
 
