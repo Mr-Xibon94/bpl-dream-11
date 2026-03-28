@@ -1,23 +1,33 @@
 import { Flag, User } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const PlayersData = ({ players, coins, setcoins  }) => {
+const PlayersData = ({ players, coins, setcoins, setselectedPlayers, selectedPlayers  }) => {
     // console.log(players); 
     const [isSuccess, setisSuccess] = useState(false)
 
+   useEffect(()=> {
+     const isActive = selectedPlayers.filter(player => player.id === players.id)
+    console.log(isActive); 
+   }, [selectedPlayers]);
+
     const handlecoins = () => {
-        
+        // setisSuccess(true)
         const currentCoins = coins - players.price;
         
         if(currentCoins>=0){
             setisSuccess(true)
             setcoins(currentCoins);
             alert(`Congrats! You selecet ${players.name}`)
+            setselectedPlayers([...selectedPlayers, players]);
+
+            // console.log(selectedPlayers);
             return
         }else{
             alert('Limit Exceed');
             return
         }
+
+        
     }
     return (
         <div className='border border-gray-200 rounded-2xl m-5'>
@@ -36,7 +46,7 @@ const PlayersData = ({ players, coins, setcoins  }) => {
                         <Flag className='text-gray-400'></Flag>
                         <p className='text-gray-400'>{players.country}</p>
                     </div>
-                    <p className='text-black shadow-gray-200 inline p-1.5 bg-gray-200 rounded-[5px] '><a href="">{players.category}</a></p>
+                    <p className='text-black shadow-gray-200 inline p-1.5 bg-gray-200 rounded-[5px] '>{players.category}</p>
                 </div>
 
                 <hr className='my-4 text-gray-300' />
